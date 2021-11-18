@@ -4,6 +4,7 @@
 variable "region" {
   description = "AWS region code for creating resources."
   type        = string
+  default     = "us-east-1"
 }
 
 variable "profile" {
@@ -14,6 +15,7 @@ variable "profile" {
 variable "cluster_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
+  default     = "1.21"
 }
 
 variable "vault_user" {
@@ -31,7 +33,7 @@ variable "cluster_name" {
 variable "force_destroy" {
   description = "Flag to determine whether storage buckets get forcefully destroyed. If set to false, empty the bucket first in the aws s3 console, else terraform destroy will fail with BucketNotEmpty error"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "is_jx2" {
@@ -43,11 +45,13 @@ variable "is_jx2" {
 variable "jx_git_url" {
   description = "URL for the Jenins X cluster git repository"
   type        = string
+  default     = "https://github.com/Koniag-FSA/jx3-eks-vault-zach.git"
 }
 
 variable "jx_bot_username" {
   description = "Bot username used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "jx-aws-bot"
 }
 
 variable "jx_bot_token" {
@@ -58,7 +62,7 @@ variable "jx_bot_token" {
 variable "nginx_chart_version" {
   type        = string
   description = "nginx chart version"
-  default     = "3.12.0"
+  default     = "4.0.6"
 }
 
 variable "install_kuberhealthy" {
