@@ -10,6 +10,7 @@ variable "region" {
 variable "profile" {
   description = "Profile stored in aws config or credentials file"
   type        = string
+  default     = "jx-profile"
 }
 
 variable "cluster_version" {
@@ -74,5 +75,5 @@ variable "install_kuberhealthy" {
 variable "node_machine_type" {
   description = "The instance type to use for the cluster's worker nodes"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.small"
 }

@@ -16,4 +16,5 @@ module "eks-jx" {
   force_destroy        = var.force_destroy
   nginx_chart_version  = var.nginx_chart_version
   install_kuberhealthy = var.install_kuberhealthy
+  node_machine_type    = var.node_machine_type
 }
