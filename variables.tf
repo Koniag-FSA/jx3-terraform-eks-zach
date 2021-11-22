@@ -63,7 +63,7 @@ variable "jx_bot_token" {
 variable "nginx_chart_version" {
   type        = string
   description = "nginx chart version"
-  default     = "4.0.6"
+  default     = "4.0.9"
 }
 
 variable "install_kuberhealthy" {
@@ -75,5 +75,6 @@ variable "install_kuberhealthy" {
 variable "node_machine_type" {
   description = "The instance type to use for the cluster's worker nodes"
   type        = string
-  default     = "t3.small"
+  #default     = "t3.small"
+  default     = "m4.large"
 }
